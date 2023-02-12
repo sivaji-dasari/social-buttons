@@ -1,17 +1,18 @@
 const Button = (props) => {
-  //  Write your code here.
-  const {text}=props;
-  const (<h1 className="buttons">{text}</h1>);
+  const { className, buttonText } = props;
+
+  return <button className={`button ${className}`}>{buttonText}</button>;
 };
 
 const element = (
-  //  Write your code here.
-  <div className="bg-container">
-    <h1 className="heading">Social Buttons</h1>
-    <div className="buttons-container">
-      <Button  className="yellow-button" text="like" />
-      <Button className="white-button" text="Comment"/>
-      <Button className="blue-button" text="Share"/>         
+  <div className="social-buttons-container">
+    <div className="content-container">
+      <h1 className="heading">Social Buttons</h1>
+      <div className="buttons-container">
+        <Button buttonText="Like" className="like-button" />
+        <Button buttonText="Comment" className="comment-button" />
+        <Button buttonText="Share" className="share-button" />
+      </div>
     </div>
   </div>
 );
